@@ -1,0 +1,99 @@
+version: 2
+
+sources:
+  - name: raw
+    description: "Raw data loaded from API Football via dlt"
+    database: football_data
+    schema: raw
+    tables:
+      - name: raw_countries
+        description: "All countries from API Football"
+        columns:
+          - name: country_code
+            description: "ISO country code"
+          - name: country_name
+            description: "Country name"
+          - name: data
+            description: "Complete JSON response from API"
+            
+      - name: raw_leagues
+        description: "All leagues and seasons from API Football"
+        columns:
+          - name: league_id
+            description: "Unique league identifier"
+          - name: league_name
+            description: "League name"
+          - name: country_name
+            description: "Country of the league"
+          - name: season
+            description: "Season year"
+          - name: data
+            description: "Complete JSON response from API"
+            
+      - name: raw_team_info
+        description: "Team information for Servette FC and Étoile Carouge"
+        columns:
+          - name: team_id
+            description: "Unique team identifier"
+          - name: team_name
+            description: "Team name"
+          - name: venue_id
+            description: "Venue/stadium identifier"
+          - name: venue_name
+            description: "Venue/stadium name"
+          - name: data
+            description: "Complete JSON response including team and venue"
+            
+      - name: raw_team_seasons
+        description: "Seasons available for teams"
+        columns:
+          - name: team_id
+            description: "Team identifier"
+          - name: season
+            description: "Season year"
+          - name: data
+            description: "Complete JSON response"
+            
+      - name: raw_venues
+        description: "Venue/stadium information"
+        columns:
+          - name: venue_id
+            description: "Unique venue identifier"
+          - name: venue_name
+            description: "Venue name"
+          - name: team_id
+            description: "Associated team identifier"
+          - name: data
+            description: "Complete venue JSON from API"
+            
+      - name: raw_fixtures
+        description: "All fixtures for Servette FC and Étoile Carouge (2025 season)"
+        columns:
+          - name: fixture_id
+            description: "Unique fixture identifier"
+          - name: fixture_date
+            description: "Date and time of fixture"
+          - name: team_id
+            description: "Team identifier"
+          - name: season
+            description: "Season year"
+          - name: status
+            description: "Fixture status (NS, FT, etc.)"
+          - name: data
+            description: "Complete fixture JSON with teams, score, league info"
+            
+      - name: raw_players
+        description: "Player squads for Servette FC and Étoile Carouge"
+        columns:
+          - name: player_id
+            description: "Unique player identifier"
+          - name: player_name
+            description: "Player name"
+          - name: team_id
+            description: "Team identifier"
+          - name: position
+            description: "Player position"
+          - name: number
+            description: "Jersey number"
+          - name: data
+            description: "Complete player JSON from API"

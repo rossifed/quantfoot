@@ -1,0 +1,30 @@
+name: 'quantfoot'
+version: '1.0.0'
+config-version: 2
+
+profile: 'quantfoot'
+
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+models:
+  quantfoot:
+    staging:
+      +materialized: view
+      +schema: staging
+    marts:
+      +materialized: table
+      +schema: marts
+
+# Important: Use custom schemas without prefix
+dispatch:
+  - macro_namespace: dbt
+    search_order: ['quantfoot', 'dbt']

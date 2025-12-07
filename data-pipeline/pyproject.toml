@@ -1,0 +1,33 @@
+[project]
+name = "quantfoot"
+version = "0.1.0"
+description = "Football data pipeline using Dagster, dlt and API-Football"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "dagster>=1.6.0",
+    "dagster-webserver>=1.6.0",
+    "dagster-embedded-elt>=0.22.0",
+    "dagster-dbt>=0.22.0",
+    "dlt[postgres]>=0.4.0",
+    "dbt-core>=1.7.0",
+    "dbt-postgres>=1.7.0",
+    "requests>=2.31.0",
+    "python-dotenv>=1.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.0",
+    "pytest-cov>=4.1.0",
+    "black>=23.7.0",
+    "ruff>=0.0.285",
+    "mypy>=1.5.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.dagster]
+module_name = "quantfoot"

@@ -1,0 +1,101 @@
+version: '3.8'
+
+services:
+  # PostgreSQL database for storing football data
+  postgres:
+    image: postgres:16-alpine
+    container_name: quantfoot-postgres
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-dagster}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-dagster_password}
+      POSTGRES_DB: ${POSTGRES_DB:-football_data}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-dagster}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - quantfoot-network
+
+  # PostgreSQL database for Dagster metadata
+  dagster-postgres:
+    image: postgres:16-alpine
+    container_name: quantfoot-dagster-postgres
+    environment:
+      POSTGRES_USER: ${DAGSTER_POSTGRES_USER:-dagster}
+      POSTGRES_PASSWORD: ${DAGSTER_POSTGRES_PASSWORD:-dagster_password}
+      POSTGRES_DB: ${DAGSTER_POSTGRES_DB:-dagster}
+    volumes:
+      - dagster_postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5433:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DAGSTER_POSTGRES_USER:-dagster}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - quantfoot-network
+
+  # Dagster webserver and dagit
+  dagster:
+    build:
+      context: ../../data-pipeline
+      dockerfile: Dockerfile
+    container_name: quantfoot-dagster
+    environment:
+      # API Football
+      API_FOOTBALL_KEY: ${API_FOOTBALL_KEY:-6f3db45add8cadeeca80b5641e4c5ee8}
+      API_FOOTBALL_HOST: ${API_FOOTBALL_HOST:-v3.football.api-sports.io}
+      SEASON: ${SEASON:-2025}
+      TEAM_ID: ${TEAM_ID:-2184}
+      
+      # Data PostgreSQL
+      POSTGRES_USER: ${POSTGRES_USER:-dagster}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-dagster_password}
+      POSTGRES_DB: ${POSTGRES_DB:-football_data}
+      POSTGRES_HOST: postgres
+      POSTGRES_PORT: 5432
+      
+      # Dagster PostgreSQL (metadata)
+      DAGSTER_POSTGRES_USER: ${DAGSTER_POSTGRES_USER:-dagster}
+      DAGSTER_POSTGRES_PASSWORD: ${DAGSTER_POSTGRES_PASSWORD:-dagster_password}
+      DAGSTER_POSTGRES_DB: ${DAGSTER_POSTGRES_DB:-dagster}
+      DAGSTER_POSTGRES_HOST: dagster-postgres
+      DAGSTER_POSTGRES_PORT: 5432
+    ports:
+      - "3000:3000"
+    volumes:
+      - ../../data-pipeline/quantfoot:/app/quantfoot
+      - ../../data-pipeline/sql:/app/sql
+      - ../../data-pipeline/dbt_project:/app/dbt_project
+      - dagster_home:/opt/dagster/dagster_home
+    depends_on:
+      postgres:
+        condition: service_healthy
+      dagster-postgres:
+        condition: service_healthy
+    command: >
+      sh -c "
+        dagster-daemon run &
+        dagster dev -h 0.0.0.0 -p 3000 -m quantfoot
+      "
+    networks:
+      - quantfoot-network
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
+    driver: local
+  dagster_postgres_data:
+    driver: local
+  dagster_home:
+    driver: local
+
+networks:
+  quantfoot-network:
+    driver: bridge
