@@ -1,0 +1,16 @@
+/home/rossifed/dev/quantfoot/services/dotnet/Teams/Teams.Application/bin/Debug/net8.0/Teams.Application.deps.json
+/home/rossifed/dev/quantfoot/services/dotnet/Teams/Teams.Application/bin/Debug/net8.0/Teams.Application.dll
+/home/rossifed/dev/quantfoot/services/dotnet/Teams/Teams.Application/bin/Debug/net8.0/Teams.Application.pdb
+/home/rossifed/dev/quantfoot/services/dotnet/Teams/Teams.Application/bin/Debug/net8.0/Teams.Domain.dll
+/home/rossifed/dev/quantfoot/services/dotnet/Teams/Teams.Application/bin/Debug/net8.0/Teams.Domain.pdb
+/home/rossifed/dev/quantfoot/services/dotnet/Teams/Teams.Application/obj/Debug/net8.0/Teams.Application.csproj.AssemblyReference.cache
+/home/rossifed/dev/quantfoot/services/dotnet/Teams/Teams.Application/obj/Debug/net8.0/Teams.Application.GeneratedMSBuildEditorConfig.editorconfig
+/home/rossifed/dev/quantfoot/services/dotnet/Teams/Teams.Application/obj/Debug/net8.0/Teams.Application.AssemblyInfoInputs.cache
+/home/rossifed/dev/quantfoot/services/dotnet/Teams/Teams.Application/obj/Debug/net8.0/Teams.Application.AssemblyInfo.cs
+/home/rossifed/dev/quantfoot/services/dotnet/Teams/Teams.Application/obj/Debug/net8.0/Teams.Application.csproj.CoreCompileInputs.cache
+/home/rossifed/dev/quantfoot/services/dotnet/Teams/Teams.Application/obj/Debug/net8.0/Teams.Application.sourcelink.json
+/home/rossifed/dev/quantfoot/services/dotnet/Teams/Teams.Application/obj/Debug/net8.0/Teams.Ap.ECED7238.Up2Date
+/home/rossifed/dev/quantfoot/services/dotnet/Teams/Teams.Application/obj/Debug/net8.0/Teams.Application.dll
+/home/rossifed/dev/quantfoot/services/dotnet/Teams/Teams.Application/obj/Debug/net8.0/refint/Teams.Application.dll
+/home/rossifed/dev/quantfoot/services/dotnet/Teams/Teams.Application/obj/Debug/net8.0/Teams.Application.pdb
+/home/rossifed/dev/quantfoot/services/dotnet/Teams/Teams.Application/obj/Debug/net8.0/ref/Teams.Application.dll

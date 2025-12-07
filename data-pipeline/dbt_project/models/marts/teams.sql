@@ -1,6 +1,18 @@
 {{
     config(
-        materialized='table'
+        materialized='table',
+        indexes=[
+            {'columns': ['team_id'], 'unique': True},
+            {'columns': ['team_name']},
+            {'columns': ['team_country']},
+            {'columns': ['venue_id']}
+        ],
+        post_hook=[
+            "ALTER TABLE {{ this }} ADD CONSTRAINT {{ this.name }}_pkey PRIMARY KEY (team_id)",
+            "ALTER TABLE {{ this }} ADD CONSTRAINT check_{{ this.name }}_founded CHECK (team_founded IS NULL OR (team_founded >= 1850 AND team_founded <= EXTRACT(YEAR FROM CURRENT_DATE)))",
+            "ALTER TABLE {{ this }} ALTER COLUMN team_id SET NOT NULL",
+            "ALTER TABLE {{ this }} ALTER COLUMN team_name SET NOT NULL"
+        ]
     )
 }}
 

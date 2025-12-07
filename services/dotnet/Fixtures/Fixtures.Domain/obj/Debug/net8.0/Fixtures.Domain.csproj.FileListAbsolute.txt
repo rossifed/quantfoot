@@ -1,0 +1,12 @@
+/home/rossifed/dev/quantfoot/services/dotnet/Fixtures/Fixtures.Domain/bin/Debug/net8.0/Fixtures.Domain.deps.json
+/home/rossifed/dev/quantfoot/services/dotnet/Fixtures/Fixtures.Domain/bin/Debug/net8.0/Fixtures.Domain.dll
+/home/rossifed/dev/quantfoot/services/dotnet/Fixtures/Fixtures.Domain/bin/Debug/net8.0/Fixtures.Domain.pdb
+/home/rossifed/dev/quantfoot/services/dotnet/Fixtures/Fixtures.Domain/obj/Debug/net8.0/Fixtures.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/home/rossifed/dev/quantfoot/services/dotnet/Fixtures/Fixtures.Domain/obj/Debug/net8.0/Fixtures.Domain.AssemblyInfoInputs.cache
+/home/rossifed/dev/quantfoot/services/dotnet/Fixtures/Fixtures.Domain/obj/Debug/net8.0/Fixtures.Domain.AssemblyInfo.cs
+/home/rossifed/dev/quantfoot/services/dotnet/Fixtures/Fixtures.Domain/obj/Debug/net8.0/Fixtures.Domain.csproj.CoreCompileInputs.cache
+/home/rossifed/dev/quantfoot/services/dotnet/Fixtures/Fixtures.Domain/obj/Debug/net8.0/Fixtures.Domain.sourcelink.json
+/home/rossifed/dev/quantfoot/services/dotnet/Fixtures/Fixtures.Domain/obj/Debug/net8.0/Fixtures.Domain.dll
+/home/rossifed/dev/quantfoot/services/dotnet/Fixtures/Fixtures.Domain/obj/Debug/net8.0/refint/Fixtures.Domain.dll
+/home/rossifed/dev/quantfoot/services/dotnet/Fixtures/Fixtures.Domain/obj/Debug/net8.0/Fixtures.Domain.pdb
+/home/rossifed/dev/quantfoot/services/dotnet/Fixtures/Fixtures.Domain/obj/Debug/net8.0/ref/Fixtures.Domain.dll

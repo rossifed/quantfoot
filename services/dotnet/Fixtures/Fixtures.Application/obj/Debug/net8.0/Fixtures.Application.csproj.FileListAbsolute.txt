@@ -1,0 +1,16 @@
+/home/rossifed/dev/quantfoot/services/dotnet/Fixtures/Fixtures.Application/bin/Debug/net8.0/Fixtures.Application.deps.json
+/home/rossifed/dev/quantfoot/services/dotnet/Fixtures/Fixtures.Application/bin/Debug/net8.0/Fixtures.Application.dll
+/home/rossifed/dev/quantfoot/services/dotnet/Fixtures/Fixtures.Application/bin/Debug/net8.0/Fixtures.Application.pdb
+/home/rossifed/dev/quantfoot/services/dotnet/Fixtures/Fixtures.Application/bin/Debug/net8.0/Fixtures.Domain.dll
+/home/rossifed/dev/quantfoot/services/dotnet/Fixtures/Fixtures.Application/bin/Debug/net8.0/Fixtures.Domain.pdb
+/home/rossifed/dev/quantfoot/services/dotnet/Fixtures/Fixtures.Application/obj/Debug/net8.0/Fixtures.Application.csproj.AssemblyReference.cache
+/home/rossifed/dev/quantfoot/services/dotnet/Fixtures/Fixtures.Application/obj/Debug/net8.0/Fixtures.Application.GeneratedMSBuildEditorConfig.editorconfig
+/home/rossifed/dev/quantfoot/services/dotnet/Fixtures/Fixtures.Application/obj/Debug/net8.0/Fixtures.Application.AssemblyInfoInputs.cache
+/home/rossifed/dev/quantfoot/services/dotnet/Fixtures/Fixtures.Application/obj/Debug/net8.0/Fixtures.Application.AssemblyInfo.cs
+/home/rossifed/dev/quantfoot/services/dotnet/Fixtures/Fixtures.Application/obj/Debug/net8.0/Fixtures.Application.csproj.CoreCompileInputs.cache
+/home/rossifed/dev/quantfoot/services/dotnet/Fixtures/Fixtures.Application/obj/Debug/net8.0/Fixtures.Application.sourcelink.json
+/home/rossifed/dev/quantfoot/services/dotnet/Fixtures/Fixtures.Application/obj/Debug/net8.0/Fixtures.09BE9C0D.Up2Date
+/home/rossifed/dev/quantfoot/services/dotnet/Fixtures/Fixtures.Application/obj/Debug/net8.0/Fixtures.Application.dll
+/home/rossifed/dev/quantfoot/services/dotnet/Fixtures/Fixtures.Application/obj/Debug/net8.0/refint/Fixtures.Application.dll
+/home/rossifed/dev/quantfoot/services/dotnet/Fixtures/Fixtures.Application/obj/Debug/net8.0/Fixtures.Application.pdb
+/home/rossifed/dev/quantfoot/services/dotnet/Fixtures/Fixtures.Application/obj/Debug/net8.0/ref/Fixtures.Application.dll

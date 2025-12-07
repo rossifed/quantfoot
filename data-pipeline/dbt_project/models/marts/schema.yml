@@ -1,0 +1,92 @@
+version: 2
+
+models:
+  - name: players
+    description: "Mart table for player data with team information"
+    columns:
+      - name: player_id
+        description: "Unique player identifier from API"
+        tests:
+          - unique
+          - not_null
+      
+      - name: player_name
+        description: "Player full name"
+        tests:
+          - not_null
+      
+      - name: team_id
+        description: "Foreign key to teams table"
+        tests:
+          - relationships:
+              to: ref('teams')
+              field: team_id
+      
+      - name: age
+        description: "Player age"
+        tests:
+          - dbt_utils.accepted_range:
+              min_value: 15
+              max_value: 50
+      
+      - name: position
+        description: "Player position"
+        tests:
+          - accepted_values:
+              values: ['Goalkeeper', 'Defender', 'Midfielder', 'Attacker']
+
+  - name: teams
+    description: "Mart table for team data with venue information"
+    columns:
+      - name: team_id
+        description: "Unique team identifier"
+        tests:
+          - unique
+          - not_null
+      
+      - name: team_name
+        description: "Team name"
+        tests:
+          - not_null
+      
+      - name: team_founded
+        tests:
+          - dbt_utils.accepted_range:
+              min_value: 1850
+              max_value: 2025
+
+  - name: fixtures
+    description: "Mart table for match fixtures"
+    columns:
+      - name: fixture_id
+        description: "Unique fixture identifier"
+        tests:
+          - unique
+          - not_null
+      
+      - name: home_team_id
+        description: "Home team ID"
+        tests:
+          - not_null
+          - relationships:
+              to: ref('teams')
+              field: team_id
+      
+      - name: away_team_id
+        description: "Away team ID"
+        tests:
+          - not_null
+          - relationships:
+              to: ref('teams')
+              field: team_id
+      
+      - name: fixture_date
+        description: "Match date"
+        tests:
+          - not_null
+      
+      - name: status
+        description: "Match status"
+        tests:
+          - accepted_values:
+              values: ['TBD', 'NS', 'LIVE', '1H', 'HT', '2H', 'ET', 'P', 'FT', 'AET', 'PEN', 'BT', 'SUSP', 'INT', 'PST', 'CANC', 'ABD', 'AWD', 'WO']

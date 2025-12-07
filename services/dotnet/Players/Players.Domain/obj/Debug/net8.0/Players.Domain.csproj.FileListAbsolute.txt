@@ -1,0 +1,12 @@
+/home/rossifed/dev/quantfoot/services/dotnet/Players/Players.Domain/bin/Debug/net8.0/Players.Domain.deps.json
+/home/rossifed/dev/quantfoot/services/dotnet/Players/Players.Domain/bin/Debug/net8.0/Players.Domain.dll
+/home/rossifed/dev/quantfoot/services/dotnet/Players/Players.Domain/bin/Debug/net8.0/Players.Domain.pdb
+/home/rossifed/dev/quantfoot/services/dotnet/Players/Players.Domain/obj/Debug/net8.0/Players.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/home/rossifed/dev/quantfoot/services/dotnet/Players/Players.Domain/obj/Debug/net8.0/Players.Domain.AssemblyInfoInputs.cache
+/home/rossifed/dev/quantfoot/services/dotnet/Players/Players.Domain/obj/Debug/net8.0/Players.Domain.AssemblyInfo.cs
+/home/rossifed/dev/quantfoot/services/dotnet/Players/Players.Domain/obj/Debug/net8.0/Players.Domain.csproj.CoreCompileInputs.cache
+/home/rossifed/dev/quantfoot/services/dotnet/Players/Players.Domain/obj/Debug/net8.0/Players.Domain.sourcelink.json
+/home/rossifed/dev/quantfoot/services/dotnet/Players/Players.Domain/obj/Debug/net8.0/Players.Domain.dll
+/home/rossifed/dev/quantfoot/services/dotnet/Players/Players.Domain/obj/Debug/net8.0/refint/Players.Domain.dll
+/home/rossifed/dev/quantfoot/services/dotnet/Players/Players.Domain/obj/Debug/net8.0/Players.Domain.pdb
+/home/rossifed/dev/quantfoot/services/dotnet/Players/Players.Domain/obj/Debug/net8.0/ref/Players.Domain.dll

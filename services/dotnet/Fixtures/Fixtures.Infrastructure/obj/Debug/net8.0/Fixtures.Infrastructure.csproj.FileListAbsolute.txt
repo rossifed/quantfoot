@@ -1,0 +1,16 @@
+/home/rossifed/dev/quantfoot/services/dotnet/Fixtures/Fixtures.Infrastructure/bin/Debug/net8.0/Fixtures.Infrastructure.deps.json
+/home/rossifed/dev/quantfoot/services/dotnet/Fixtures/Fixtures.Infrastructure/bin/Debug/net8.0/Fixtures.Infrastructure.dll
+/home/rossifed/dev/quantfoot/services/dotnet/Fixtures/Fixtures.Infrastructure/bin/Debug/net8.0/Fixtures.Infrastructure.pdb
+/home/rossifed/dev/quantfoot/services/dotnet/Fixtures/Fixtures.Infrastructure/bin/Debug/net8.0/Fixtures.Domain.dll
+/home/rossifed/dev/quantfoot/services/dotnet/Fixtures/Fixtures.Infrastructure/bin/Debug/net8.0/Fixtures.Domain.pdb
+/home/rossifed/dev/quantfoot/services/dotnet/Fixtures/Fixtures.Infrastructure/obj/Debug/net8.0/Fixtures.Infrastructure.csproj.AssemblyReference.cache
+/home/rossifed/dev/quantfoot/services/dotnet/Fixtures/Fixtures.Infrastructure/obj/Debug/net8.0/Fixtures.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+/home/rossifed/dev/quantfoot/services/dotnet/Fixtures/Fixtures.Infrastructure/obj/Debug/net8.0/Fixtures.Infrastructure.AssemblyInfoInputs.cache
+/home/rossifed/dev/quantfoot/services/dotnet/Fixtures/Fixtures.Infrastructure/obj/Debug/net8.0/Fixtures.Infrastructure.AssemblyInfo.cs
+/home/rossifed/dev/quantfoot/services/dotnet/Fixtures/Fixtures.Infrastructure/obj/Debug/net8.0/Fixtures.Infrastructure.csproj.CoreCompileInputs.cache
+/home/rossifed/dev/quantfoot/services/dotnet/Fixtures/Fixtures.Infrastructure/obj/Debug/net8.0/Fixtures.Infrastructure.sourcelink.json
+/home/rossifed/dev/quantfoot/services/dotnet/Fixtures/Fixtures.Infrastructure/obj/Debug/net8.0/Fixtures.ECB11FB3.Up2Date
+/home/rossifed/dev/quantfoot/services/dotnet/Fixtures/Fixtures.Infrastructure/obj/Debug/net8.0/Fixtures.Infrastructure.dll
+/home/rossifed/dev/quantfoot/services/dotnet/Fixtures/Fixtures.Infrastructure/obj/Debug/net8.0/refint/Fixtures.Infrastructure.dll
+/home/rossifed/dev/quantfoot/services/dotnet/Fixtures/Fixtures.Infrastructure/obj/Debug/net8.0/Fixtures.Infrastructure.pdb
+/home/rossifed/dev/quantfoot/services/dotnet/Fixtures/Fixtures.Infrastructure/obj/Debug/net8.0/ref/Fixtures.Infrastructure.dll

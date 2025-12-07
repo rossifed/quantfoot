@@ -1,6 +1,26 @@
 {{
     config(
-        materialized='table'
+        materialized='table',
+        indexes=[
+            {'columns': ['fixture_id'], 'unique': True},
+            {'columns': ['fixture_date']},
+            {'columns': ['home_team_id']},
+            {'columns': ['away_team_id']},
+            {'columns': ['league_id']},
+            {'columns': ['status']},
+            {'columns': ['season']}
+        ],
+        post_hook=[
+            "ALTER TABLE {{ this }} ADD CONSTRAINT {{ this.name }}_pkey PRIMARY KEY (fixture_id)",
+            "ALTER TABLE {{ this }} ADD CONSTRAINT fk_{{ this.name }}_home_team FOREIGN KEY (home_team_id) REFERENCES {{ this.schema }}.teams(team_id) ON DELETE CASCADE",
+            "ALTER TABLE {{ this }} ADD CONSTRAINT fk_{{ this.name }}_away_team FOREIGN KEY (away_team_id) REFERENCES {{ this.schema }}.teams(team_id) ON DELETE CASCADE",
+            "ALTER TABLE {{ this }} ADD CONSTRAINT check_{{ this.name }}_teams_diff CHECK (home_team_id != away_team_id)",
+            "ALTER TABLE {{ this }} ADD CONSTRAINT check_{{ this.name }}_scores CHECK ((home_goals IS NULL OR home_goals >= 0) AND (away_goals IS NULL OR away_goals >= 0))",
+            "ALTER TABLE {{ this }} ALTER COLUMN fixture_id SET NOT NULL",
+            "ALTER TABLE {{ this }} ALTER COLUMN home_team_id SET NOT NULL",
+            "ALTER TABLE {{ this }} ALTER COLUMN away_team_id SET NOT NULL",
+            "ALTER TABLE {{ this }} ALTER COLUMN fixture_date SET NOT NULL"
+        ]
     )
 }}
 
